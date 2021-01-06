@@ -1,0 +1,89 @@
+
+**** 09/15/20 12:49:49 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ 123_Amrita EXP-1(a) PSPICE Three CMOS Inverters varying Kn/Kp
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+v1 1 0 dc 0
+v2 5 0 dc 5
+m1 2 1 5 5 pmod(w=10u  l=10u)
+m2 3 1 5 5 pmod(w=10u  l=10u)
+m3 4 1 5 5 pmod(w=10u  l=10u)
+m4 2 1 0 0 nmod(w=200u l=2u)
+m5 3 1 0 0 nmod(w=20u  l=2u)
+m6 4 1 0 0 nmod(w=2u   l=2u)
+.model pmod pmos(vto=-1 lambda=0.02)
+.model nmod nmos(vto= 1 lambda=0.02)
+.dc v1 0 5 0.25
+.probe
+.end
+
+**** 09/15/20 12:49:49 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ 123_Amrita EXP-1(a) PSPICE Three CMOS Inverters varying Kn/Kp
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               pmod            nmod            
+               PMOS            NMOS            
+       LEVEL    1               1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO   -1               1            
+          KP   20.000000E-06   20.000000E-06 
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA     .02             .02         
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    0               0            
+        CGDO    0               0            
+        CGBO    0               0            
+         TOX    0               0            
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+
+          JOB CONCLUDED
+
+**** 09/15/20 12:49:49 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ 123_Amrita EXP-1(a) PSPICE Three CMOS Inverters varying Kn/Kp
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        0.00
+

@@ -1,0 +1,13 @@
+EXP-1(d) CMOS Two input NAND Gate [29-Subhankar Karmakar]A11 DT-19112020
+vdd 1 0 DC 5v
+va 5 0 PULSE 0 5 0 0.1ns 0.1ns 50ns 100ns
+vb 4 0 PULSE 0 5 0 0.1ns 0.1ns 100ns 200ns
+m1 3 5 1 1 pmod(w=40u l=10u)
+m2 2 4 3 3 pmod(w=40u l=10u)
+m3 2 5 0 0 nmod(w=10u l=2u)
+m4 2 4 0 0 nmod(w=10u l=2u)
+.MODEL pmod pmos(vto = -1 lambda=0.02)
+.MODEL nmod nmos(vto =  1 lambda=0.02)
+.TRAN 0ns 200ns
+.PROBE
+.END

@@ -1,0 +1,120 @@
+
+**** 11/22/20 22:49:55 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ 123_Amrita EXP-1(c) CMOS Two input NAND Gate DT-04112020
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+vdd 1 0 DC 5v
+va 2 0 PULSE 0 5 0 0.1ns 0.1ns 50ns 100ns
+vb 3 0 PULSE 0 5 0 0.1ns 0.1ns 100ns 200ns
+m1 4 2 1 1 pmod(w=40u l=10u)
+m2 4 3 1 1 pmod(w=40u l=10u)
+m3 4 2 5 5 nmod(w=10u l=2u)
+m4 5 3 0 0 nmod(w=10u l=2u)
+.MODEL pmod pmos(vto = -1 lambda=0.02)
+.MODEL nmod nmos(vto =  1 lambda=0.02)
+.TRAN 0ns 600ns
+.PROBE
+.END
+
+**** 11/22/20 22:49:55 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ 123_Amrita EXP-1(c) CMOS Two input NAND Gate DT-04112020
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               pmod            nmod            
+               PMOS            NMOS            
+       LEVEL    1               1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO   -1               1            
+          KP   20.000000E-06   20.000000E-06 
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA     .02             .02         
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    0               0            
+        CGDO    0               0            
+        CGBO    0               0            
+         TOX    0               0            
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+**** 11/22/20 22:49:55 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ 123_Amrita EXP-1(c) CMOS Two input NAND Gate DT-04112020
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    1)    5.0000  (    2)    0.0000  (    3)    0.0000  (    4)    5.0000      
+
+(    5)    2.5000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    vdd         -2.510E-12
+    va           0.000E+00
+    vb           0.000E+00
+
+    TOTAL POWER DISSIPATION   1.26E-11  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/22/20 22:49:55 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ 123_Amrita EXP-1(c) CMOS Two input NAND Gate DT-04112020
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        0.00
+

@@ -1,0 +1,17 @@
+EXP-1(b) Transient Response of 3 CMOS Inverters with varying Kn(div by)Kp [29-Subhankar Karmakar] A11 DT-26112020
+v1 1 0 pulse 0 5 0 2ns 2ns 8ns 20ns
+v2 5 0 dc 5
+m1 2 1 5 5 pmod(w=5u  l=2u)
+m2 3 1 5 5 pmod(w=5u  l=2u)
+m3 4 1 5 5 pmod(w=5u  l=2u)
+m4 2 1 0 0 nmod(w=10u l=2u)
+m5 3 1 0 0 nmod(w=5u  l=2u)
+m6 4 1 0 0 nmod(w=20u l=2u)
+c1 2 0 0.2pF
+c2 3 0 0.2pF
+c3 4 0 0.2pF
+.model pmod pmos(vto=-1 lambda=0.02)
+.model nmod nmos(vto= 1 lambda=0.02)
+.tran 0.2ns 60ns
+.probe
+.end
